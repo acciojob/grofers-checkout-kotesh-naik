@@ -9,7 +9,7 @@ const getSum = () => {
 	let sum = 0;
 	prices.forEach((price)=>{
 		const value = parseInt(price.textContent);
-		if(! isNoN(value)){
+		if(! isNon(value)){
 			sum += value;
 		}
 	})
