@@ -9,7 +9,7 @@ const getSum = () => {
 	let sum = 0;
 	prices.forEach((price)=>{
 		const value = parseInt(price.textContent);
-		if(! isNon(value)){
+		if(! isNaN(value)){
 			sum += value;
 		}
 	})
@@ -19,8 +19,9 @@ const getSum = () => {
 	const totalPriceAns= document.createElement("td");
 	totalPriceRow.appendChild(totalPriceData);
 	totalPriceRow.appendChild(totalPriceAns);
-	const data = ' total price (in Rs) : ';
+	//const data = ' total price (in Rs) : ';
 	totalPrice.Data.append('total price( in Rs):');
+	totalPriceAns.append(sum);
 	const table = document.querySelector("tbody");
 	table.appendChild(totalPriceRow);
 };
